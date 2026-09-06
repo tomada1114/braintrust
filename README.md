@@ -2,7 +2,7 @@
 
 プロダクトを作る前の「何を作るか」を壁打ちするための、Claude Code 専用リポジトリ。
 
-主な対象は、AI エージェント（Claude Agent SDK）を組み込んだアプリケーション。
+主な対象は、AI を組み込んだアプリケーション全般。ベンダーや SDK は選定対象として扱う。
 アイデアの整理、そもそも LLM が必要かの検討、エージェント構成の設計、
 言語・技術スタックの選定などを、対話しながら詰めていく。
 
@@ -14,7 +14,14 @@
 ## 構成
 
 - `CLAUDE.md` — 壁打ち相手としての原則
+- `docs/plan/` — アイデアごとのディレクトリ。索引は `docs/plan/README.md`、書式は `_templates/`
+- `docs/landscape/` — LLM / エージェント基盤の前提知識。日付つきで、古くなったら取り直す
+- `docs/decisions.md` / `docs/open-questions.md` — このリポジトリ自体の運用の決定と未決
 - `.claude/skills/` — 局面ごとの進め方
+  - `intaking-ideas` — 新しいアイデアを受け取る
+  - `recording-research` — 出典つきで調査を残す
+  - `assessing-ai-architecture` — LLM の要否と構成、ベンダーの比較
+  - `handing-off-plans` — 実装へ進むときの引き継ぎ
 
 ## 名前の由来
 
