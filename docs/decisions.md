@@ -91,3 +91,11 @@
 - 却下した案: 設計レベル（tokens.css を含む）までここで行う — 「実装しない」原則を緩める必要がある。
 - 却下した案: 構想レベルのみで実現性は扱わない — 技術スタック候補を事前に相談したいという要望に合わない。
 - 却下した案: 順番を固定しない — 体験より先に AI 構成の話になると、手段が目的に先行する。
+
+## 2026-09-06 5 つの skill の中身を確定する
+
+- 決定: `.claude/skills/` の 5 スキル（intaking-ideas / shaping-experience / recording-research / assessing-ai-architecture / handing-off-plans）の手順・出力・判断基準を確定し、実ファイルとして置いた。判断基準のうち量のあるもの（LLM 要否と構成の判定、ベンダー比較軸）は `assessing-ai-architecture/references/tiers.md`、サブエージェントのブリーフは `recording-research/references/agents/fact-check.md` に置く。体験の構想と AI 構成の境界は、shaping-experience は技術スタック候補まで、モデル呼び出しとベンダーは assessing-ai-architecture、とした。
+- 理由: CLAUDE.md の skills 節は適用場面しか書いておらず、実際の進め方がセッションごとに揺れていた。手順を skill 側に固定し、CLAUDE.md は原則だけを持つ形に分担する。
+- 却下した案: CLAUDE.md に 5 つの手順を全部書く — 指示文書が長くなり、読ませたい原則が埋もれる。
+- 却下した案: skill にテンプレート全文を複製する — 書式の正本が `docs/plan/_templates/` と 2 箇所になり、必ず食い違う。
+- 却下した案: 体験と AI 構成を 1 つの skill にまとめる — 同じ決定を 2 つの経緯で書くことになり、decisions.md からどちらの議論の結果か追えなくなる。
