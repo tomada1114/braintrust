@@ -32,7 +32,7 @@ Read the idea's `overview.md`, `decisions.md`, `open-questions.md` and `research
 5. **Write the files.**
    - `docs/plan/<idea-slug>/experience.md` — format: `docs/plan/_templates/experience.md` (利用場面 / 中核の体験 / 便利さの定義 / 最初の版で成立させる体験 / 実現性 / 想定ユーザーの広がり). Follow the template rather than inventing headings; it is versioned in the repository.
    - Append to the idea's `decisions.md` only what the owner explicitly decided, with the reason and the rejected options and why they were rejected. Without the rejection reasons the same option comes back later.
-   - Everything else goes to `open-questions.md`. **Always leave "does this hold for users other than the owner" open there.** The first assumed user is the owner, whose own observation is primary evidence; whether it generalises is a separate question and stays separate.
+   - Everything else goes to `open-questions.md`. **"Does this hold for users other than the owner" already has a standing entry from `intaking-ideas`.** Point at it and update its 材料 line if new evidence appeared this round; create it only if it is missing. The first assumed user is the owner, whose own observation is primary evidence; whether it generalises is a separate question and stays separate.
 
 ## Output
 
@@ -45,3 +45,4 @@ Read the idea's `overview.md`, `decisions.md`, `open-questions.md` and `research
 - Do not paste template text here or into the answer — point at the template path.
 - Do not write prices, free-tier figures, model names or versions into the files. Dated background lives in `docs/landscape/`; point at it so stale facts are not frozen into the plan.
 - Vendor, billing and data-handling comparisons are not this skill's job even when the owner raises them mid-feasibility. Note them and pass them on.
+- When the owner answers an exclusive choice with "all of them" (全部入り), that is not a decision yet. Show the cost and the side effect of each extra item in the same round and ask which to drop, then record only what survives.

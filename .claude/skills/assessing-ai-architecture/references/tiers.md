@@ -49,7 +49,7 @@ produce the same value to the user at very different cost.
 
 ## Comparison axes
 
-Do not run all seven every time. Pick the ones that actually move this decision; axes that
+Do not run all eight every time. Pick the ones that actually move this decision; axes that
 cannot change the answer only crowd the table.
 
 | Axis | What to look at | Why it bites |
@@ -61,6 +61,7 @@ cannot change the answer only crowd the table.
 | Structured output (構造化出力) | Whether schema-constrained output is supported, and what happens when it fails | Free-text output that has to be parsed becomes the app's most fragile seam |
 | SDK and language (SDK と言語) | Which languages have a maintained SDK, and what the alternative is | Has to match the stack chosen in `experience.md`, or the stack changes |
 | Lock-in (ロックイン) | How much would have to be rewritten to switch | Sets how reversible this decision is, which is what makes it safe to make early |
+| 応答速度 (latency) | Time to first token and total time for the call shape the app uses, and whether the vendor publishes it | For an interactive single-call app the wait is the experience, and a published figure is rarely the figure in production, so it usually ends as "measure at implementation" |
 
 Values for every axis come from `docs/landscape/` and `docs/plan/<idea-slug>/research/`.
 Where neither has the value, that is a research question for `recording-research`, not
