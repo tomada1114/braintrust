@@ -70,10 +70,13 @@
 
 ## skills
 
-順番の目安は intaking → shaping → assessing → handing-off。体験が決まらないと必要なモデル呼び出しも決まらないので、AI 構成の前に体験を詰める。
+基本の流れは intaking → shaping → assessing → handing-off。体験が決まらないと必要な
+モデル呼び出しも決まらないので、AI 構成の前に体験を詰める。research はどの段でも挟む。
 
-- `intaking-ideas` — 新しいアイデアを受け取ったとき。既存プロダクトとの違い、実在する痛み、核の言い直し、作らない選択肢を詰めて overview.md にする。
-- `shaping-experience` — 持ち込みの直後。利用場面、中核の体験、便利さの定義、最初の版の体験範囲、実現性と技術スタック候補を詰めて experience.md にする。設計レベル（画面・配色）には入らない。
-- `recording-research` — 事実確認や比較調査を行うとき。出典・日付・確度・グレーゾーンつきで research/ に残す。
-- `assessing-ai-architecture` — LLM が必要か、単発 / ワークフロー / エージェントのどれか、ベンダーをどう比較するかを詰めるとき。`docs/landscape/` を先に読む。
-- `handing-off-plans` — 実装へ進むと決まったとき。卒業ドキュメントを書く。
+- `intaking-ideas` — アイデアを受け取る。overview.md を作る。
+- `shaping-experience` — 体験と実現性を詰める。experience.md を作る。
+- `recording-research` — 事実確認・比較調査を残す。research/ に書く。
+- `assessing-ai-architecture` — LLM の要否と構成、ベンダー比較を詰める。
+- `handing-off-plans` — 実装へ進むときの卒業ドキュメントを書く。
+
+各 skill の発火条件と手順は skill 側に書いてある。ここは順番と担当だけ。
