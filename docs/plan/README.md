@@ -8,6 +8,7 @@
 `docs/plan/<idea-slug>/` に以下を置く。書式は `docs/plan/_templates/` を参照。
 
 - `overview.md` — 何を誰に。実在する痛み、既存プロダクトに足りないもの、作らない選択肢
+- `experience.md` — 利用場面、中核の体験、便利さの定義、最初の版の体験範囲、実現性と技術スタック候補
 - `decisions.md` — 決定の記録。追記のみ。決定 / 理由 / 却下した案とその理由
 - `open-questions.md` — 未決の論点。何が決まれば決まるか / 材料 / 状態
 - `research/` — 調査メモ。1 トピック 1 ファイル

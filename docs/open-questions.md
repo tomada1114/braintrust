@@ -2,9 +2,9 @@
 
 決まったら decisions.md にエントリを足し、ここの状態を更新する。
 
-## 4 つの skill それぞれの中身
+## 5 つの skill それぞれの中身
 
-- 何が決まれば決まるか: intaking-ideas / recording-research / assessing-ai-architecture / handing-off-plans の各手順・出力・判断基準。実際に skill を書く段階で確定する
+- 何が決まれば決まるか: intaking-ideas / shaping-experience / recording-research / assessing-ai-architecture / handing-off-plans の各手順・出力・判断基準。実際に skill を書く段階で確定する
 - 材料: CLAUDE.md の skills 節（適用場面のみ記載）、`docs/plan/_templates/` の各テンプレート
 - 状態: 未決
 
