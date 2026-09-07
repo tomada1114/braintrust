@@ -72,10 +72,14 @@
 
 基本の流れは intaking → shaping → assessing → handing-off。体験が決まらないと必要な
 モデル呼び出しも決まらないので、AI 構成の前に体験を詰める。research はどの段でも挟む。
+ユーザーニーズと競合の調査は intaking / shaping の裏付けとして使い、結果は overview / experience
+の見直し材料にする（書き換えるかはオーナーが決める）。
 
 - `intaking-ideas` — アイデアを受け取る。overview.md を作る。
 - `shaping-experience` — 体験と実現性を詰める。experience.md を作る。
 - `recording-research` — 事実確認・比較調査を残す。research/ に書く。
+- `discovering-user-needs` — 公開の声（レビュー・フォーラム・SNS・Q&A）を並列に集め、オーナーの観察と突き合わせてニーズ地図を作る。research/user-needs/ に書く。
+- `surveying-competitors` — 既存・競合アプリの機能、UI/UX とそれが嬉しい理由、未解決の課題を調べ、上位数本は実際に触る。research/competitors/ に書く。
 - `assessing-ai-architecture` — LLM の要否と構成、ベンダー比較を詰める。
 - `handing-off-plans` — 実装へ進むときの卒業ドキュメントを書く。
 
