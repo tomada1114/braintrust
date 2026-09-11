@@ -31,4 +31,4 @@
 | --- | --- | --- |
 | `small-talk-trainer` | 検討中 | 英語の Small Talk を続けられるようになるための、短いセッション型の練習装置（ローカルサーバー + ブラウザ、TypeScript） |
 | `english-opinion-trainer` | 実装へ | 英語で自分の意見を短く伝えるための、ランダムなお題に答える一発の反復ドリル（ブラウザ、チャット専用、短文 / 長めの 2 モード）。`handoff.md` あり |
-| `english-vocab-app` | 検討中 | オーナー専用のシンプルな単語カードアプリ（Anki 代替）。目的・トピックで絞り込み、意味説明+穴埋め例文から想起して自己採点、FSRS で復習間隔を決める。実行時に AI は使わず、カード生成・点検にのみ AI Skill を使う。最初は IELTS 2〜3 トピック×30 語 |
+| `english-vocab-app` | 実装へ | オーナー専用のシンプルな単語カードアプリ（Anki 代替、ローカル Next.js）。目的・トピックで絞り込み、意味説明+穴埋め例文から想起して自己採点、FSRS で復習間隔を決める。実行時に AI は使わず、カード生成・点検にのみ AI Skill を使う。最初は IELTS の environment / education / health × 各 30 語。`handoff.md` あり |
