@@ -1,0 +1,196 @@
+# english-saas-venture 未決の論点
+
+決まったら decisions.md にエントリを足し、ここの状態を更新する。
+
+## 論点は 2 系統に分かれている（2026-09-14 オーナーの指示で分割）
+
+このアイデアの未決は性質の違う 2 つに分かれる。**別々のセッションで再開すること。**
+混ぜると、決めれば進む問いと、調べても出口が見つかっていない問いが同じ机に乗り、両方が中途半端になる。
+
+- **系統 A: 体験・解く課題の再検討** — 決めれば進む。材料は `experience.md` と
+  `research/user-needs/owner-pain-hearing.md`（ヒアリング全 3 ラウンド）。
+  次にやるなら `assessing-ai-architecture`（AI の要否・構成・コスト構造）が入口。
+- **系統 B: ユーザーの獲得** — 調査 11 本を経てもなお、機能する経路が 1 つも見つかっていない。
+  材料は `research/acquisition-channels.md` / `reddit-promotion-rules.md` / `app-store-aso.md` /
+  `launch-channels.md` / `srs-precedents.md`。次にやるなら未調査の**相乗り経路（Bunpro 型）**が入口。
+- **系統 C: 事業としての前提** — A と B の両方に効く。金額のゴールライン、そもそも作るかどうか。
+
+### 再開するときに最初に読むもの
+
+1. `overview.md`（何を誰に、既存との差分）
+2. `decisions.md`（決定 15 件。**追記のみ。過去のエントリは書き換えない**）
+3. このファイルの、再開する系統の節だけ
+4. 系統 A なら `experience.md` と `research/user-needs/owner-pain-hearing.md`、
+   系統 B なら `research/` の獲得経路 4 本
+
+---
+
+# 系統 A: 体験・解く課題の再検討
+
+## 「自分が書いた英語の誤りを SRS の対象にする」案は成立するか
+
+- 出どころ: オーナーの追加発言（2026-09-14）。「チャットや投稿で間違える、文法がぐちゃぐちゃ、伝わらない英語を書いてしまう恥ずかしさ」が個人的な悩みの一つ。あわせて「ステートレスにフィードバックして終わりだと、うまく回らないし続かない気がする」という観察。
+- 噛み合う点:
+  - decisions.md 2026-09-14「SRS の線に賭ける」と一致する。ChatGPT も Grammarly も直して終わりで、同じ誤りの再発を覚えていない。`research/chatgpt-substitution-line.md` の「チューターに足りなかったのはスケジュール管理と誤り追跡」という証言そのもの。
+  - open-questions.md「英語における漢字に相当する対象は何か」の穴を部分的に埋める。事前に列挙された固定リストではなく、**ユーザー自身の誤りが離散的な学習対象になる**。非ネイティブの誤りの多くは前置詞・コロケーションで、decisions.md 2026-09-14 の対象（コロケーション・句動詞）と一致する。
+  - `research/user-needs/engineer-english-market.md` の Typemate 投稿者の証言（送信前に 2〜3 回書き直していた）と同じ痛み。
+- 何が決まれば決まるか（未解決の 3 点）:
+  1. **「記録が資産になる」仮説は `research/chatgpt-substitution-line.md` で不支持寄り（反証あり）と判定されている**（2000 日ストリークのユーザーがそれでも解約）。この案はその仮説に体重を乗せているため、正面から衝突する。溜まった誤りの記録が実際に継続を生むのか
+  2. コールドスタート。誤りが溜まるまで価値が出ない。最初のセッションで何を見せるか
+  3. 検出レイヤーのコモディティ化。Grammarly は株価 -38%、10-K のリスク開示、レイオフ、Superhuman への事業転換（同ファイル）。「間違いを見つける」ことには課金できず、課金できるとすれば「見つけた後の管理」だが、そこの実証は薄い
+- 材料: `research/chatgpt-substitution-line.md`、`research/user-needs/engineer-english-market.md`、`research/srs-precedents.md`
+- 状態: 未決（有力な候補として扱うが、上記 1 が最大の反証）
+
+## 英語における「漢字に相当する対象」は何か（この線の成否を決める）
+
+- 何が決まれば決まるか: SRS で管理するに値する、離散的で・十分に大きく・「覚えるしかない」と学習者に合意される対象が英語に存在するか。候補は試験の単語リスト（IELTS / TOEFL）、コロケーション、句動詞、頻出フレーズ、発音の型など。ここが弱いと WaniKani 型は成立しない
+- 材料: `research/chatgpt-substitution-line.md`（SRS 線の支持）、`research/indie-saas-track-record.md`（WaniKani / Bunpro の存続）、既存の `english-vocab-app`（IELTS の environment / education / health × 各 30 語で始める設計）
+- 状態: 未決。decisions.md 2026-09-14「SRS の線に賭ける」の「承知した上での割り切り」として明示した最大の穴
+
+## 「型」の粒度をどう決めるか
+
+- 何が決まれば決まるか: 細かすぎれば型が無限に増えて「終わらない」感が戻り、粗すぎれば
+  別問題が同じ型だと感じられない。LLM 任せにすると粒度が揺れ、固定の体系を持つと多言語化で作り直しになる
+- 材料: `experience.md` 実現性、`research/user-needs/owner-pain-hearing.md`（「なんとなく分かるが言語化できない」）
+- 状態: 未決。**体験の成否を左右する最大の技術的論点**
+
+## ○×にせず、かつ「クリアした」を明確にする方法
+
+- 何が決まれば決まるか: 「別回答でそれで伝わるのにバツ扱いされるのはやだ」（オーナー明示）と、
+  「課題をクリアした達成感が欲しい」（オーナー明示）を同時に満たす判定と見せ方
+- 材料: `research/user-needs/owner-pain-hearing.md` ラウンド 3、`experience.md` 中核の体験
+- 状態: 未決
+
+## 書く練習は、話す場面に転移するか
+
+- 何が決まれば決まるか: オーナーの痛みの中心は「話すときに言葉が出てこない」「パーティーで喋れない」。
+  最初の版はテキスト産出のみと決めたが、書く練習が話す場面に効くかは未検証。効かないなら
+  最初の版は中心の痛みに当たらないことになる
+- 材料: `research/user-needs/owner-pain-hearing.md` ラウンド 1〜3、`decisions.md` 2026-09-14（産出はテキストのみ）
+- 状態: 未決。**最初の版の価値そのものに関わる**
+
+## 「使いどころに気づけない」痛みをいつ扱うか
+
+- 何が決まれば決まるか: ヒアリングで重要な痛みとして挙がったが、「アプリの外につなげない」
+  という決定により最初の版から外れた。第 2 版以降で扱うのか、そもそも扱わないのか
+- 材料: `research/user-needs/owner-pain-hearing.md` ラウンド 3、`decisions.md` 2026-09-14（アプリの外とつなげない）
+- 状態: 未決（最初の版では手つかず）
+
+## セッション 3〜5 分という長さは、デスクトップ着席前提でも適切か
+
+- 何が決まれば決まるか: 3〜5 分はすきま時間を想定していた段階の回答。その後オーナーが
+  デスクトップ・着席前提に訂正したため、前提が変わっている。産出と比較を丁寧にやるには
+  短い可能性がある一方、「終わりが明確」という利点は失いたくない
+- 材料: `experience.md` 利用場面、`research/user-needs/owner-pain-hearing.md`（「無限に学習が終わらない」が現行への不満）
+- 状態: 未決（当面 3〜5 分で進める）
+
+## 「AI が中核機能」という規約上の失格条件をどう扱うか
+
+- 何が決まれば決まるか: `research/reddit-promotion-rules.md` の r/languagelearning 規約「Apps for which AI powers the core features are generally not allowed. These are just wrappers over LLMs which are already available for free」に対し、本アイデアの中核（自分の誤りから型を同定し、同じ型の別問題を生成する）が該当するかどうか。該当を避けるなら、AI を「中核」ではなく「補助」に見える形にするか、AI 非依存の価値（誤りの蓄積・スケジューリング・転移の測定そのもの）を前面に置く設計が要る
+- 材料: `research/reddit-promotion-rules.md`、`research/chatgpt-substitution-line.md`（支持されたのは「記憶とスケジュールの管理」であって「AI の賢さ」ではない）
+- 状態: 未決。**なお、この整理は Reddit 対策としてだけでなく、「ChatGPT の薄いラッパーではない」ことの説明としても要る**
+
+## 技術スタックの決定
+
+- 何が決まれば決まるか: `experience.md` で候補 A（TypeScript + Next.js、マネージド Postgres、Stripe）を
+  推奨としたが、オーナーの決定はまだ無い。AI の構成とベンダーは `assessing-ai-architecture` の担当
+- 材料: `experience.md` 技術スタック候補
+- 状態: 未決（推奨のみ）
+
+## 既存の english-vocab-app（個人用）との関係をどうするか
+
+- 何が決まれば決まるか: `english-vocab-app` は「オーナー専用の道具。差分は問わない」と決めた上で handoff 済み（状態: 実装へ）。今回 SRS の線に賭けると決めたことで、事業版と個人用版が同じ領域に並ぶことになった。片方に統合するか、別物として並走させるか
+- 材料: `docs/plan/english-vocab-app/decisions.md` 第 4 部 2026-09-10、同 handoff.md
+- 状態: 未決
+
+---
+
+# 系統 B: ユーザーの獲得
+
+## 獲得経路は未解決のまま残っている
+
+- 何が決まれば決まるか: 線（SRS）が決まっても、獲得の問題は 1 ミリも解決していない。SEO 不可、営業なし、グローバル、月 30 万円という条件は変わらない。WaniKani / Bunpro がどう客を獲得したかは今回の調査では未確認
+- 材料: `research/acquisition-channels.md`、`research/indie-saas-track-record.md`
+- 状態: 未決。**これが引き続き最大の論点**
+
+## Reddit が閉じた後に残る獲得経路はどれか
+
+- 何が決まれば決まるか: `research/reddit-promotion-rules.md` により r/languagelearning が実質閉鎖と判明した。残る候補は Show HN、Product Hunt、TikTok / YouTube Shorts、Discord などのコミュニティ、アプリストア ASO、既存プロダクトへの相乗り（Bunpro 型）。それぞれの実績・規約・必要労力が未確認
+- 材料: `research/acquisition-channels.md`（Reddit の評価は下方修正が必要）、`research/srs-precedents.md`（WaniKani / Bunpro の初速は結局分からなかった）
+- 状態: 未決。**このアイデア全体で最大かつ最後まで残っている論点**
+
+## 個人がセルフサーブ課金で現実的に賭けられる獲得経路はどれか
+
+- 何が決まれば決まるか: SEO が本当に不可能か、App Store / Reddit / X / コミュニティ相乗りのどれに実績があるか。AI 検索（AI Overviews）以降の前提変化
+- 材料: `research/acquisition-channels.md`、`research/indie-saas-track-record.md`（いずれも完了）
+- 状態: 未決。decisions.md 2026-09-14「セルフサーブ課金に限る」により、これが最大の論点になった
+
+## 複数アプリを出す戦略における「共通の入口」を何にするか
+
+- 何が決まれば決まるか: 複数アプリ戦略が成立する条件は、アプリごとに集客をやり直さないこと。共通の入口（同じ読者・同じコミュニティ・同じ導線）を 1 回作り、その上に複数のアプリを載せる形になっているか。候補は、英語学習の過程を書くブログ / 特定コミュニティでの継続的な存在 / 1 本目のアプリ自体が 2 本目の入口になる構造（同一ブランド・相互導線）など
+- 材料: `research/acquisition-channels.md`、`research/indie-saas-track-record.md`、`research/srs-precedents.md`
+- 状態: 未決。**これが決まらない限り、複数出しても同じ賭けを繰り返すだけになる**
+
+## 量産か、1 本に時間をかけるか（未解決のまま）
+
+- 何が決まれば決まるか: 2026-09-14「複数アプリを出して当たったものを伸ばす」と決めたが、残った獲得経路の両方が量産物を明示的に拒否している。r/languagelearning「vibe coded in a relatively short amount of time (i.e. it took you less than 6 months to develop), you are likely falling short」、HN「Don't post quickly-generated one-offs; anybody can do that now. Share something that is deeply personal and interesting to you」
+- 材料: `research/reddit-promotion-rules.md`、`research/launch-channels.md`
+- 状態: 未決。英語専用を外す決定では解決していない
+
+## 半自動化した発信は、残った経路で実際に効くのか
+
+- 何が決まれば決まるか: Claude Code の skill で半自動化した発信が、SEO を除いた各経路（Reddit / HN / dev.to / X / TikTok / YouTube）で実際に成果につながるか。各経路の自動投稿・自己宣伝に関するルールと、AI 生成コンテンツの扱い（プラットフォーム側のポリシーと、コミュニティ側の受け止め）
+- 材料: `research/reddit-promotion-rules.md`（2026-09-14 に確認済み。AI 生成文は即 BAN 事由）。2026-09-14 の決定（発信量の上限を外す、半自動化が前提）
+- 状態: 未決。「量を増やせば届く」が成り立つ経路と成り立たない経路を切り分ける必要がある
+
+## 月数本の発信で月 30 万円規模に届かせる成長ループをどう作るか
+
+- 何が決まれば決まるか: プロダクト自体が持つべき成長ループの型。決定 3 件（月 30 万円以上 / グローバル発信 / 発信は月数本）を同時に満たすには、発信量ではなくプロダクト内の仕組みで広がる必要がある。共有される成果物、無料枠の出力、公開プロフィール、埋め込み可能なもの、など
+- 材料: `research/acquisition-channels.md`、`research/indie-saas-track-record.md`。ただしどちらも「個人開発 B2C 語学アプリの成長ループ」を直接は調べていない
+- 状態: 未決。追加調査が要る
+
+## 非ネイティブ開発者層は「日常会話のスキルアップ用アプリ」を欲しがるか
+
+- 何が決まれば決まるか: オーナーが信用を持って発信できる場所（Hacker News / dev.to / 英語圏の開発者コミュニティ）にいる層が、業務ツールではなく**会話スキルアップの学習アプリ**に金を払うか。`research/user-needs/engineer-english-market.md` で確認できた痛みは業務場面（Slack、PR、面接、会議）に偏っており、日常会話の痛みとしては未確認
+- 材料: `research/user-needs/engineer-english-market.md`、`research/reddit-promotion-rules.md`（一般の英語学習者コミュニティである r/languagelearning は実質閉じている）
+- 状態: 未決。**チャネルとターゲットの不一致がここに集約されている**
+
+---
+
+# 系統 C: 事業としての前提（A と B の両方に効く）
+
+## 引き下げ後の目標金額をいくらに置くか
+
+- 何が決まれば決まるか: 2026-09-14 に「月 30 万円は現実的でない」として引き下げを決めたが、具体的な数字が未確定。撤退ラインと、狙うニッチの広さがここで決まる
+- 材料: `research/indie-saas-track-record.md`（個人開発の実績帯は副収入水準）、`research/collocation-and-paying-learners.md`（Clozemaster の $12.99/月・$79.99/年。月 30 万円は月額で約 155 人、年額で約 300 人）
+- 状態: 未決
+
+## 事業としてのゴールライン（金額）
+
+- 何が決まれば決まるか: オーナーが月いくらを目指すか。月 3 万円なら極端に狭いニッチでよく、月 30 万円なら有料継続 150〜300 人規模が要り、狙うニッチの広さと捨てる選択肢が変わる
+- 材料: 2026-09-14 の質問で形態（Stripe セルフサーブ課金）は答えられたが、金額は回答が無かった
+- 状態: 未決（調査結果を見てから再度問う）
+
+## 中級（B1→B2）の停滞は課金に結びつく痛みか
+
+- 何が決まれば決まるか: 「次に何をすればいいか分からない」に人が金を払う証拠が見つかるか。人が払うのは通常 (a) 試験スコア (b) 仕事での必要 (c) 習慣・娯楽 のいずれかで、曖昧な自己向上は転換率が最も低いという仮説がある
+- 材料: `research/user-needs/intermediate-plateau.md`、`research/user-needs/reddit-direct-observation.md`、`research/collocation-and-paying-learners.md`（いずれも完了。痛みの実在は確度 高、支払い意思は層によって分かれる）
+- 状態: 未決
+
+## グローバル × 月 30 万円の組み合わせに前例が無いことをどう扱うか
+
+- 何が決まれば決まるか: 2026-09-14 の決定 3 件を重ねた条件（グローバル B2C / セルフサーブ課金 / 営業なし / SEO 不可 / 発信は月数本 / 月 30 万円以上）を満たす個人開発事例は、今回の調査では 0 件だった。これを「調査の網羅性の限界」と見るか「その組み合わせは成立しない」と見るか
+- 材料: `research/indie-saas-track-record.md`（13 事例中、収益と獲得経路の両方を数字＋原文で確認できたのは 2 件のみ。WebSearch クォータ制約による網羅性の限界を調査自身が明記している）
+- 状態: 未決。ニッチと成長ループが決まった後に、その条件で再度事例を探すのが筋
+
+## 日本語話者特有の詰まり方を捨てると、差別化要因まで消えないか
+
+- 何が決まれば決まるか: グローバル対象にしたときに、オーナーがユーザーとして持つ解像度が武器として残るかどうか。既存の大手（Duolingo / Speak / ELSA）との差分をどこに置くか
+- 材料: decisions.md 2026-09-14「ターゲットは英語学習者。日本語話者に限定しない」の「未確定」節
+- 状態: 未決
+
+## そもそも作らない、という選択肢
+
+- 何が決まれば決まるか: 音声会話が ChatGPT に飲まれた市場で、個人が新規に入る余地が数字で確認できるか。確認できなければ「この市場には入らない」も成立する結論
+- 材料: `research/indie-saas-track-record.md` の失敗・撤退事例と大手の数字
+- 状態: 未決
