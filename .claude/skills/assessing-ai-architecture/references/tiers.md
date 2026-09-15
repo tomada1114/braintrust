@@ -62,6 +62,7 @@ cannot change the answer only crowd the table.
 | SDK and language (SDK と言語) | Which languages have a maintained SDK, and what the alternative is | Has to match the stack chosen in `experience.md`, or the stack changes |
 | Lock-in (ロックイン) | How much would have to be rewritten to switch | Sets how reversible this decision is, which is what makes it safe to make early |
 | 応答速度 (latency) | Time to first token and total time for the call shape the app uses, and whether the vendor publishes it | For an interactive single-call app the wait is the experience, and a published figure is rarely the figure in production, so it usually ends as "measure at implementation" |
+| Reasoning effort (推論強度) | How much latency and quality change between the model's effort levels (low/medium/high, or equivalent) | The shape of this trade-off is not uniform across vendors — some models lose almost no latency going from high to medium, others lose almost no quality. Check the per-model table in `docs/landscape/` rather than assuming a pattern from one vendor generalizes to another |
 
 Values for every axis come from `docs/landscape/` and `docs/plan/<idea-slug>/research/`.
 Where neither has the value, that is a research question for `recording-research`, not
