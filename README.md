@@ -14,7 +14,7 @@
 
 ## 構成
 
-- `CLAUDE.md` — 壁打ち相手としての原則
+- `AGENTS.md` — 壁打ち相手としての原則
 - `docs/plan/` — アイデアごとのディレクトリ。索引は `docs/plan/README.md`、書式は `_templates/`
 - `docs/landscape/` — LLM / エージェント基盤の前提知識。日付つきで、古くなったら取り直す
 - `docs/decisions.md` / `docs/open-questions.md` — このリポジトリ自体の運用の決定と未決
