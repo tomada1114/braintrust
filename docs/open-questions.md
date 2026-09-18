@@ -5,7 +5,7 @@
 ## 5 つの skill それぞれの中身
 
 - 何が決まれば決まるか: intaking-ideas / shaping-experience / recording-research / assessing-ai-architecture / handing-off-plans の各手順・出力・判断基準。実際に skill を書く段階で確定する
-- 材料: CLAUDE.md の skills 節（適用場面のみ記載）、`docs/plan/_templates/` の各テンプレート
+- 材料: AGENTS.md の skills 節（適用場面のみ記載）、`docs/plan/_templates/` の各テンプレート
 - 状態: 決定済み（`.claude/skills/` 配下の 5 スキル。決定は `docs/decisions.md`）
 
 ## docs/landscape/ の更新頻度
