@@ -57,6 +57,8 @@ Anthropic は 3 層に分かれている。Tool Runner(通常 SDK のベータ�
 
 ### Vercel AI SDK
 
+> **この節は 2026-09-06 時点・v6 以前の記述。** チャット UI の文脈では `docs/landscape/2026-09-chat-ui-stack.md`（2026-09-15、v7 基準）を先に読む。以下の記述のうち `isStepCount` / `ToolLoopAgent` / 構造化出力は v7 でも有効だが、UI 層（`useChat` の形）とサーバー側のレスポンス生成は v7 で変わっている。
+
 - Apache License 2.0 の OSS(https://github.com/vercel/ai/blob/main/LICENSE, 確認 2026-09-06, 確度 高)
 - 公式 24・コミュニティ 33 の provider パッケージを持ち、OpenAI / Anthropic / Google / Vertex / Bedrock / Mistral / Cohere / Groq / DeepSeek 等をカバー。Ollama や LM Studio は `@ai-sdk/openai-compatible` やコミュニティ provider 経由(https://ai-sdk.dev/docs/foundations/providers-and-models, 確認 2026-09-06, 確度 中)
 - `@ai-sdk/openai-compatible` は baseURL と API キーを直接指定してカスタム provider を作る軽量パッケージで、Vercel AI Gateway や Vercel アカウントを経由せずローカルサーバーに直接繋げる(https://ai-sdk.dev/providers/openai-compatible-providers, 確認 2026-09-06, 確度 中)
