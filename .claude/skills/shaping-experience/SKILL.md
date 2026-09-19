@@ -43,6 +43,6 @@ Read the idea's `overview.md`, `decisions.md`, `open-questions.md` and `research
 - A recommendation is not a decision. Only an explicit statement from the owner makes it one; do not proceed as if a recommendation had been accepted.
 - Say which parts are weak. Praise that ends the review leaves the weak part in place.
 - Do not paste template text here or into the answer — point at the template path.
-- Do not write prices, free-tier figures, model names or versions into the files. Dated background lives in `docs/landscape/`; point at it so stale facts are not frozen into the plan.
+- Do not write prices, free-tier figures, model names or versions into the files. Dated background lives in `docs/landscape/`; point at it so stale facts are not frozen into the plan. The one exception is a dated `decisions.md` entry recording a model or vendor the owner explicitly chose: name it there with a pointer to the `docs/landscape/` file, never in `experience.md`. Prices and version numbers stay out even there.
 - Vendor, billing and data-handling comparisons are not this skill's job even when the owner raises them mid-feasibility. Note them and pass them on.
 - When the owner answers an exclusive choice with "all of them" (全部入り), that is not a decision yet. Show the cost and the side effect of each extra item in the same round and ask which to drop, then record only what survives.

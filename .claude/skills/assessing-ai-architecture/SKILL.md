@@ -17,6 +17,7 @@ Deciding whether an LLM is needed; choosing between a single call, a fixed workf
 
 1. The newest dated file under `docs/landscape/`. If the newest is roughly more than three months old, say so and offer to refresh it through `recording-research` before relying on it. Do not treat it as current merely because it is the newest thing present. If the directory holds no background notes, proceed on the basis that there are none rather than filling the gap from memory.
 2. The idea's `experience.md`, `decisions.md`, `open-questions.md` and `research/`.
+3. If the idea is chat-shaped, `docs/landscape/2026-09-chat-ui-stack.md` and the 2026-09-15 entry in `docs/decisions.md`: the transport and conversation-state layer is already settled as Vercel AI SDK, so do not reopen it as a comparison axis. What stays open per idea is the screen layer and the vendor. Note that this file's refresh interval is two months, not three.
 
 ## Procedure
 
@@ -24,7 +25,8 @@ Deciding whether an LLM is needed; choosing between a single call, a fixed workf
 2. **Enumerate the model calls the first version strictly requires, and argue against anything beyond them** (Step 2 of the same reference). Per-event calls are the default reach and almost never the minimum — a call on every turn and one review call after the session often give the user the same thing at very different cost.
 3. **Compare on the axes that matter** — the seven are defined in [references/tiers.md](references/tiers.md). Use only the ones that can change this decision; the rest just fill the table. Take every value from `docs/landscape/` and the idea's `research/`. Where the value is not recorded, treat it as a question for `recording-research`, and do not assert it from memory: figures and terms move, and a wrong one asserted here becomes a premise nobody re-checks.
 4. **Lay out the options with their trade-offs and add exactly one recommendation with its reason.** Options handed over without a recommendation put the whole judgement back on the owner, which is not a sounding board.
-5. **Record.** Only what the owner explicitly decided goes into the idea's `decisions.md`, with the reason and the rejected options and why they were rejected — without the rejection reasons the same option returns later. Everything still open goes to `open-questions.md`. Both follow `docs/plan/_templates/`; point at the templates rather than copying them.
+5. **Ask where verification lands before writing "measure at implementation".** Latency, score drift and effort-level comparisons usually end as something to measure once code exists. Whether that measurement becomes a planned step (in `open-questions.md` and later the handoff) or is left to the owner to notice in use is the owner's call, and the two read very differently downstream. Put the question in the same round as the recommendation, with the cost of each: a planned step delays first use, an unplanned one risks records accumulating under a rubric that is later changed.
+6. **Record.** Only what the owner explicitly decided goes into the idea's `decisions.md`, with the reason and the rejected options and why they were rejected — without the rejection reasons the same option returns later. Everything still open goes to `open-questions.md`. Both follow `docs/plan/_templates/`; point at the templates rather than copying them.
 
 ## Output
 
@@ -34,6 +36,6 @@ Updates to `docs/plan/<idea-slug>/decisions.md` and `open-questions.md`, and res
 
 - Naming an SDK is not a decision to use it. Run Step 0 anyway; the owner naming a tool is evidence of familiarity, not of need.
 - A recommendation is not a decision. Only an explicit statement from the owner makes it one.
-- Do not write prices, free-tier figures, model names or versions into this skill, into `references/tiers.md`, or into any file that is not dated. Values age; the dated files carry them.
+- Do not write prices, free-tier figures, model names or versions into this skill, into `references/tiers.md`, or into any file that is not dated. Values age; the dated files carry them. A dated `decisions.md` entry is the one place a model or vendor name belongs once the owner has explicitly chosen it — name it there with a pointer to the `docs/landscape/` file, so the decision can be recorded without freezing the figures behind it. Prices and version numbers stay out even there.
 - Do not settle the experience here. If the core loop turns out to be unsettled, hand it back to `shaping-experience` — deciding the call structure over an undecided experience just gets redone.
 - Say when the background notes are stale rather than quietly using them. An unstated staleness becomes a hidden premise.

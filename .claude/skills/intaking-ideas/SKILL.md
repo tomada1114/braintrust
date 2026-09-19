@@ -50,5 +50,5 @@ Everything goes under `docs/plan/<idea-slug>/`, never at the repository root —
 - A recommendation is not a decision. Write to `decisions.md` only when the owner has explicitly said they decided; never assume acceptance and proceed as if settled.
 - Say plainly when something is weak. Ending on praise leaves the weak part unexamined until it costs implementation time.
 - Do not copy template text into this skill or into the discussion — point at the template path and fill it in. The template is versioned in the repository and would drift out of sync.
-- Do not write prices, free-tier figures, model names or version numbers into the idea files. Dated background belongs in `docs/landscape/`; point there instead, so stale facts are not preserved as if current.
+- Do not write prices, free-tier figures, model names or version numbers into the idea files. Dated background belongs in `docs/landscape/`; point there instead, so stale facts are not preserved as if current. The one exception is a dated `decisions.md` entry recording a model or vendor the owner explicitly chose: name it there, with a pointer to the `docs/landscape/` file it came from, because a decision that cannot be named cannot be recorded and will be reopened. Prices and version numbers stay out even there.
 - One idea, one directory: `docs/plan/<idea-slug>/`.
