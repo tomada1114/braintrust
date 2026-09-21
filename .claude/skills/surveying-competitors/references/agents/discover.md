@@ -32,6 +32,12 @@ returns the products that got translated, not the products people in that langua
 
 ## Constraints
 
+- Fetch only hosts whose publisher you can name: GitHub, package registries, app stores, a
+  named vendor's official site or docs, major media and forums. Never open a parked, guessed or
+  otherwise unknown domain. Whether a domain is taken is answered with `dig +short`, never by
+  requesting the site, and a host that only appeared in search results is reported from its
+  snippet and marked `未取得`. The full rule, and the incident behind it, is in
+  `.claude/skills/_shared/safe-fetching.md`.
 - A candidate is a product a user could reach today. Discontinued products, waitlists with no
   public product, and research demos are reportable, but say so in `whyRelevant`.
 - Include a product even when it only covers part of the core loop. Say which part. Adjacent

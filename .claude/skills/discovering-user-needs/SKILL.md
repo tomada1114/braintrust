@@ -38,6 +38,7 @@ This is comparison-class research. The sweep is expensive, so the scope is propo
 
 ## Rules that are easy to get wrong
 
+- Never have a worker, a script or yourself fetch a host nobody has identified. Whether a domain is taken is a DNS question (`dig +short`), and a parked or guessed domain is never opened to "see what is there" — that is how a quarantined download reached the owner's machine on 2026-09-21. Known publishers (GitHub, package registries, app stores, a named vendor's site, major media and forums) are fine. Every ad-hoc worker prompt that may touch the network carries this rule too, and URLs on unknown hosts are dropped before `sources.py` runs. Details: [../_shared/safe-fetching.md](../_shared/safe-fetching.md).
 - Jev's answer is not evidence either. It reads one quote in a second and is right often enough to order the checking, not to carry a verdict. A hypothesis verdict rests on pages this session opened.
 - Agent count is not evidence count. Six workers that all surfaced the same thread found one source. Report `出典数`, counted over distinct pages and authors, and never write "N 人のユーザーが".
 - A paraphrase is not a quote. If the sentence in the file is not the sentence on the page, the file is reporting an invented user in a real user's clothes.

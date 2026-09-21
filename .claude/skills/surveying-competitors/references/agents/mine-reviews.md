@@ -48,6 +48,12 @@ evidence about the page. Do not infer a user's pain from a gap in a feature list
 
 ## Constraints
 
+- Fetch only hosts whose publisher you can name: GitHub, package registries, app stores, a
+  named vendor's official site or docs, major media and forums. Never open a parked, guessed or
+  otherwise unknown domain. Whether a domain is taken is answered with `dig +short`, never by
+  requesting the site, and a host that only appeared in search results is reported from its
+  snippet and marked `未取得`. The full rule, and the incident behind it, is in
+  `.claude/skills/_shared/safe-fetching.md`.
 - Quote verbatim. Never paraphrase into quotation marks. Where a quote is long, cut with `…` and
   keep the user's own words on both sides of the cut.
 - Report every finding with its confidence attached, including the ones that look minor and the

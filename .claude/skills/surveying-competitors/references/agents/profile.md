@@ -54,6 +54,12 @@ describe a step as observed; describe it as what the video shows.
 
 ## Constraints
 
+- Fetch only hosts whose publisher you can name: GitHub, package registries, app stores, a
+  named vendor's official site or docs, major media and forums. Never open a parked, guessed or
+  otherwise unknown domain. Whether a domain is taken is answered with `dig +short`, never by
+  requesting the site, and a host that only appeared in search results is reported from its
+  snippet and marked `未取得`. The full rule, and the incident behind it, is in
+  `.claude/skills/_shared/safe-fetching.md`.
 - Report every finding, with its confidence attached. Do not filter by importance — the caller has
   the plan's context and decides what to keep.
 - Where a source is silent, say so rather than filling the gap from what similar products do.

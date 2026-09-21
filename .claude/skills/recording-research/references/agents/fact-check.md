@@ -25,6 +25,12 @@ Today's date is **{{TODAY}}**. Treat it as given, and use it to judge how old a 
 
 ## Constraints
 
+- Fetch only hosts whose publisher you can name: GitHub, package registries, app stores, a
+  named vendor's official site or docs, major media and forums. Never open a parked, guessed or
+  otherwise unknown domain. Whether a domain is taken is answered with `dig +short`, never by
+  requesting the site, and a host that only appeared in search results is reported from its
+  snippet and marked `未取得`. The full rule, and the incident behind it, is in
+  `.claude/skills/_shared/safe-fetching.md`.
 - Go to primary sources first — the vendor's own documentation, terms of service, and
   pricing pages. They are the only text the vendor is accountable for.
 - Use third-party articles only where the primary sources are silent, and mark them as

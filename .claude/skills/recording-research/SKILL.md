@@ -34,6 +34,7 @@ Read the idea's `open-questions.md` and its existing `research/` files. A questi
 
 ## Rules that are easy to get wrong
 
+- Never have a worker, a script or yourself fetch a host nobody has identified. Whether a domain is taken is a DNS question (`dig +short`), and a parked or guessed domain is never opened to "see what is there" — that is how a quarantined download reached the owner's machine on 2026-09-21. Known publishers (GitHub, package registries, app stores, a named vendor's site, major media and forums) are fine. Every ad-hoc worker prompt that may touch the network carries this rule too, and URLs on unknown hosts are dropped before `sources.py` runs. Details: [../_shared/safe-fetching.md](../_shared/safe-fetching.md).
 - Do not skip step 3 because the worker sounded confident. Confidence in a summary carries no evidence.
 - Record the source date as the page shows it, or `記載なし`. Do not substitute the day you looked.
 - Keep the gray zone honest: what the sources are silent about, where they contradict each other, and what could not be checked. Silence recorded as agreement is the failure this section exists to prevent.

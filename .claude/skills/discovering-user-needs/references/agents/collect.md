@@ -18,6 +18,12 @@ Search your cell, run every query you were given, and return the voices you find
 
 ## Constraints
 
+- Fetch only hosts whose publisher you can name: GitHub, package registries, app stores, a
+  named vendor's official site or docs, major media and forums. Never open a parked, guessed or
+  otherwise unknown domain. Whether a domain is taken is answered with `dig +short`, never by
+  requesting the site, and a host that only appeared in search results is reported from its
+  snippet and marked `未取得`. The full rule, and the incident behind it, is in
+  `.claude/skills/_shared/safe-fetching.md`.
 - Stay inside your cell. Other workers hold the other modalities and the other language;
   wandering outside yours duplicates their work and leaves your own cell thin.
 - Quote the source's own words, unchanged, in the language they were written in. No

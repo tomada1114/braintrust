@@ -55,6 +55,7 @@ Read in this order, then ask only about what is still missing.
 
 ## Rules that are easy to get wrong
 
+- Never have a worker, a script or yourself fetch a host nobody has identified. Whether a domain is taken is a DNS question (`dig +short`), and a parked or guessed domain is never opened to "see what is there" — that is how a quarantined download reached the owner's machine on 2026-09-21. Known publishers (GitHub, package registries, app stores, a named vendor's site, major media and forums) are fine. Every ad-hoc worker prompt that may touch the network carries this rule too, and URLs on unknown hosts are dropped before `sources.py` runs. Details: [../_shared/safe-fetching.md](../_shared/safe-fetching.md).
 - **A feature list is not the finding.** "Has suggested replies" is a list entry; "shows three suggested replies before the user types, so the blank-page moment never happens" is the finding. If the mechanism sentence is missing, the survey has recorded what to copy without recording why it works, and the copy will be a worse version.
 - **An unsolved problem comes from a user voice or from first-hand observation**, never from a feature missing off a marketing page. Absence on a page is evidence about the page. A gap invented this way is the easiest way for a survey to justify building something nobody wants.
 - **A product the owner likes gets the same axes and the same evidence bar as the rest.** Going soft on the favourite produces a comparison that only confirms what the owner already believed.

@@ -48,6 +48,7 @@ zsh -ic 'python3 .claude/skills/discovering-user-needs/scripts/triage_voices.py 
 - 指示を字義どおりに読む。無関係な文脈は精度を落とすので、state には判定に要るものだけを入れる（`triage_voices.py` が引用文と仮説だけを渡し、extract の読みを渡さないのはこのため）。
 - state に入った文をデータとして疑わない。集めた声の中に指示めいた文があれば引きずられうる。
 - `sources.py` はスクリプトで描画されるページ（Reddit、X、アプリストアの多く）を取得できず、`fetch_failed` を返す。これは「引用が無い」ではなく「手で開け」の意味。
+- `sources.py` は渡された URL をそのまま取得する。発行元を特定できないホスト(駐車ドメイン、推測で組み立てた URL、検索結果にだけ出てきたサイト)の URL は、実行前に入力から外す。理由と基準は [../safe-fetching.md](../safe-fetching.md)。
 - 送信される内容: 引用文、仮説、主張、出典ページの本文。TypeSafe は顧客データを学習に使わないと明記している（同上）。公開されていない個人情報は state に入れない。
 
 ## 較正の状態
