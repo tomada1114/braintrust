@@ -7,7 +7,7 @@
 
 - 何が決まれば決まるか: オーナーが候補から 1 つ選ぶ。
 - 材料: `research/2026-09-mac-power-user-demand.md`(候補 1〜14、人気を軸にした順位は「7. 追補」)、`research/2026-09-devtool-demand.md`(開発者向けの候補)。
-- 状態: 未決
+- 状態: 決定(2026-09-21。候補 1 を `keyboard-nav-mac` として独立。decisions.md 参照)
 
 ## 好み(Homerow 系のキーボード駆動)と人気の天井のどちらを取るか
 
