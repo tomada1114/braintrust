@@ -1,0 +1,17 @@
+{
+  "model": "jev-1.13.0",
+  "questions": {
+    "states_claim": {
+      "type": "noul",
+      "instructions": "Does `passage` itself state or directly show what `claim` says? Judge only from the words of the passage. The claim and the passage may be in different languages.",
+      "criteria": {
+        "true": "The passage says what the claim says, in its own words or in another language.",
+        "false": "The passage is on the same topic but does not say it, or is about something else."
+      }
+    },
+    "contradicts_claim": {
+      "type": "noul",
+      "instructions": "Does `passage` say something that cannot be true if `claim` is true?"
+    }
+  }
+}

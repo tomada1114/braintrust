@@ -1,0 +1,29 @@
+{
+  "model": "jev-1.13.0",
+  "questions": {
+    "stance": {
+      "type": "choice",
+      "instructions": "`voice.quote` is one person's public post, in its original language. `hypothesis` describes a pain that a product owner believes some people have. Judge only from the words of the post what it says about that hypothesis.",
+      "criteria": {
+        "supports": "The author describes having the pain in `hypothesis.pain`, in a situation like `hypothesis.situation`.",
+        "refutes": "The post says what `hypothesis.refutedBy` describes, or says the author does not have this pain in this situation.",
+        "touches_neutral": "The post is about the same situation or topic, but does not say whether the pain exists.",
+        "unrelated": "The post is not about this situation or this pain."
+      }
+    },
+    "first_hand": {
+      "type": "noul",
+      "instructions": "Is the author of `voice.quote` describing their own experience, rather than reporting someone else's or speculating?"
+    },
+    "intensity": {
+      "type": "score",
+      "instructions": "How much weight do the words of `voice.quote` themselves show the problem carries for the author?",
+      "criteria": [
+        "The post shows no cost or consequence to the author.",
+        "The author expresses annoyance or a wish, and nothing more.",
+        "The author says the problem keeps recurring, or describes a workaround they keep up.",
+        "The author paid for a workaround, left a product over it, or gave up an attempt because of it."
+      ]
+    }
+  }
+}
