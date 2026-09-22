@@ -6,8 +6,8 @@
 ## この痛みはオーナー以外にもあるか。既存の本・アプリの弱点は何か
 
 - 何が決まれば決まるか: 公開の声で仮説 H1〜H5 の当否が判定されること
-- 材料: `research/user-needs/owner-pain-hearing.md`。公開の声の調査は実施中（2026-09-22）
-- 状態: 未決
+- 材料: `research/user-needs/owner-pain-hearing.md`、`research/user-needs/instant-composition-pains.md`（2026-09-22。H1 単調・H3 判定・H4 例文は支持、H2 弱点に合わない出題・H5 ChatGPT の記憶のなさは根拠弱い。「単語・句動詞・構文が選べない」を直接語る声は見つからなかった）
+- 状態: 未決（overview.md を書く段で閉じる）
 
 ## overview.md が未作成
 
@@ -18,11 +18,11 @@
 ## 誤認識と本当の誤りを判定が見分けられるか
 
 - 何が決まれば決まるか: 誤認識は判定で吸収する方向（オーナー確認 2026-09-22、入力後に手で直させる方式は採らない）。そのうえで、音声認識が落としやすい冠詞・語尾（三単現・時制）と、オーナーが直したい文法の誤りが重なるため、両者を見分けられるかを確かめること。見分けられなければ、直したい誤りを見逃すか、誤認識で×を出すかのどちらかになる
-- 材料: `research/user-needs/owner-pain-hearing.md` ラウンド 4 と「読みの確認」、`../english-saas-venture/research/user-needs/owner-pain-hearing.md` ラウンド 4
+- 材料: `research/user-needs/owner-pain-hearing.md` ラウンド 4 と「読みの確認」、`research/user-needs/instant-composition-pains.md`（誤認識で×の声 11 件、言い直せない、判定が固まる）、`../english-saas-venture/research/user-needs/owner-pain-hearing.md` ラウンド 4
 - 状態: 未決（技術的に可能か要調査）
 
 ## ゲーミフィケーションのどの仕組みが効くか
 
 - 何が決まれば決まるか: 学習アプリのゲーミフィケーション（ストリーク、リーグ、解放、タイムアタック等）の仕組みと、効果・反発の根拠を調べること。視覚的な気持ちよさなど、問題そのもの以外で楽しさを出す手段も対象に含める（オーナーの要望 2026-09-22）
-- 材料: まだない。声の調査の後に別ファイルで調べる（decisions.md 2026-09-22）
+- 材料: `research/user-needs/instant-composition-pains.md`（Duolingo の子どもっぽさ・XP での誘導への反発。出典 1 ページ）。仕組みと効果の根拠は別ファイルで調べる（decisions.md 2026-09-22）
 - 状態: 未決
