@@ -235,7 +235,7 @@
 | `growth-list` | 行ごとに「表の日本語（1 行に省略）」+ 右に差（「−1.2 秒」`mono-sm` / 「×→○」`label`）。最初の 3 行だけ出し、「すべて見る」で開く |
 | `bar-chart`（累計） | 直近 14 日の言った文の数の棒。棒は `text/secondary`、今日の棒で今回増えた分だけ `accent`。高さ 48、棒の幅 8、間 6 |
 | `difficulty-line` | `up`: 「次から TOEIC 730 前後の文」+「↑」、行全体を `accent` の文字で 1 回光らせる。`down`: 同じ文言に「↓」、`text/secondary`、動きなし。`same`: 出さない |
-| `milestone-card` | 面 `surface`、1.5px `accent` の縁、称号名（`heading`）+ 何の節目か（`caption`）。節目に達した回だけ |
+| `milestone-card` | 面 `surface`、1.5px `accent` の縁、称号名（`heading`）+ 何の節目か（`caption`）。節目に達した回だけ。同じ称号は二度出さず、取った称号は数が下がっても消さない（`../decisions.md` 2026-09-22「称号は取り消さず、同じ称号は二度出さない」） |
 | ポイント | 「+10 pt」（`accent`、`mono-md`）+「合計 1,240 pt」（`caption`） |
 
 ### 5.10 シート・トースト・空の状態
